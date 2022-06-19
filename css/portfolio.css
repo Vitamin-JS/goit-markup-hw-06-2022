@@ -1,0 +1,150 @@
+header {
+    border-bottom: 1px solid #ECECEC;
+    background-color: var(--secondary-bg-color);
+}
+   
+
+/* ====================== Кнопки-фильтры ============================= */
+
+/* ===   Бэкграунд секции ============= */
+.jobs {
+    background-color: var(--main-bg-color);
+}
+
+/* ========== Блок с кнопками ========= */
+.filter .list {
+    display: flex;
+    justify-content: center;
+}
+
+.filter li:not(:last-child) {
+    margin-right: 8px;
+}
+
+/* === Отступ секции main/header/footer ==== */
+.main-box {
+    padding-top: 93px;  
+    padding-bottom: 94px;  
+}
+
+/* ==== Нижний отступ от фильтров ====== */
+.filter{
+    margin-bottom: 50px;
+}
+
+.filter-list button{
+    font-family: roboto, sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--secondary-text-color);
+    background: var(--secondary-bg-color);
+    border: none;
+    border-radius: 4px;
+    height: 38px;
+    cursor: pointer;
+
+    transition-property: background-color, box-shadow, border-radius  ;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.filter-list button:hover,
+.filter-list button:focus {
+    background-color: var(--color-acent);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+}
+
+/* =================== Примеры работ ================================= */
+/* === Flex-box секции Примеры работ=== */
+.jobs-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.jobs-list li {
+    width: 370px;
+    /* width: calc((1170px-60px)/3);  -  считает 390px вместо 370px - ????????????????????????*/
+    margin-bottom: 30px;
+}
+
+/* ====  Отступы карточек работ ======= */
+.jobs-list li:not(:nth-child(3n)) {
+    margin-right: 30px;
+}
+
+.jobs-card {
+    display: inline-block;
+    text-decoration: none;
+}
+
+/* ====== Фото работ  ================= */
+.jobs-img {
+    display: block;
+}
+
+/* ==== Контейнер Названия и типа проекта=== */
+.descr {
+    padding: 20px 24px;
+    border-right: 1px solid #EEEEEE ;
+    border-bottom: 1px solid #EEEEEE;
+    border-left: 1px solid #EEEEEE; 
+    background-color: var(--main-bg-color);  
+    width: 370px;
+}
+
+/* ======== Название проекта=========== */
+.jobs-name {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+    color: var(--secondary-text-color);
+    margin-bottom: 4px;
+}
+
+/* ========== Тип проекта============== */
+.jobs-type {
+    font-size: 16px;
+    letter-spacing: 0.03em;
+    line-height: 1.9;
+    color: var(--main-text-color);
+}
+
+.jobs-descr {
+    position: absolute;
+    display: block;
+    left: 0;
+    bottom: -100%;
+    font-size: 18px;
+    letter-spacing: 0.03em;
+    line-height: 1.5;
+    background-color: var(--color-acent);
+    color: var(--main-bg-color);
+
+    height: 294px;
+    padding: 63px 24px;
+
+    transition-property: transform;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/*  ====  Hover на карточку работ ======== */
+.jobs-card:hover {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.jobs-card:hover .jobs-descr,
+.jobs-card:focus .jobs-descr {
+    transform: translateY(-100%);
+    transition-duration: 400ms;
+}
+
+
+/* ====  Позиционирование и трансформация описания проета ==== */
+.img-box {
+    position: relative;
+    overflow: hidden;
+}

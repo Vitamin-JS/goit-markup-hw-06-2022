@@ -1,0 +1,557 @@
+/* ========= Заголовки Чем занимаемся, Наша команда, Клиенты ================== */
+.works-title, .team-title, .clients-title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+    color: var(--secondary-text-color);
+    text-align: center;
+}
+
+/* =============================== Блок  Hero   ================================  */
+.hero {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.5), rgba(47, 48, 58, 0.5)), url("../images/header-meeting-min.jpg");
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    max-width: 1600px;
+    max-height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 200px;
+    padding-bottom: 200px;
+}
+
+.hero-title {
+    font-size: 44px;
+    font-weight: 900;
+    line-height: 1.4;
+    color: #ffffff;
+
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+}
+
+.hero-btn {
+  
+    background-color: var(--color-acent);
+    color: var(--main-bg-color);
+    font-size: 16px;
+    line-height: 1.9;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+
+    min-width: 200px;
+    height: 50px;
+    padding: 10px 32px;
+    
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* ==================  Модальное окно     =============================== */
+/* ===== Оверлей - backdrop ======= */
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 10;
+
+    opacity: 1;
+    transition: opacity 250ms linear; /*по уроку Репеты */   
+}
+
+.backdrop.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+    
+}
+
+.backdrop.is-hidden .modal {
+    transform: translate(-50%, -50%) scale(0.8);   
+    
+}
+
+
+/* === Стили модального окна ======= */
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    
+    /* width: 400px;
+    height: 400px; */
+    background: var(--main-bg-color);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    padding: 40px;
+
+    transform: translate(-50%, -50%) scale(1);
+    transition: tarnsform 250ms linear, 250ms linear;
+}
+
+/* === Форма модалки ======= */
+
+.modal-title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    letter-spacing: 0.03em;
+    color: var(--secondary-text-color);
+    margin-bottom: 30px;
+}
+
+.modal-data {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    
+}
+
+.modal-data input,
+.modal-data textarea {
+    width: 448px;
+    height: 40px;
+    padding: 12px 42px;
+    margin-bottom: 28px;
+
+    font-size: 14px;
+    letter-spacing: 0.01em;
+
+    color: var(--main-text-color);
+    border: solid 1px rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+}
+
+.modal-data textarea {
+    height: 120px;
+    resize: none;
+    margin-bottom: 0;
+}
+
+.data-policy {
+    margin-bottom: 30px;
+    font-size: 14px;
+    line-height: 1.7;
+    letter-spacing: 0.03em;
+}
+.modal-btn {
+    width: 200px;
+    height: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    background-color: var(--color-acent);
+    color: var(--main-bg-color);
+    border-style: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+}
+
+.modal-policy-link {
+    color: var(--color-acent);
+}
+
+
+/* === Кнопка в модалке ========== */
+.modal-close {
+    position: absolute;
+    display: flex;
+    top: 0px;
+    right: 0px;
+    transform: translate(50%, -50%);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: var(--main-bg-color);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    align-items: center;
+}
+
+.modal-close::after {
+    content: '';
+    width: 18px;
+    height: 18px;
+    background-image: url(../images/close-black.svg);
+    background-position: center;
+}
+
+/* =================== Секция Преимущесва ==============================  */
+/* ==== Flex-box Преимущества   =============*/
+.adv-list {
+    display: flex;
+} 
+
+.adv-list li {
+    width: calc((100%-90px)/4);
+    display: flex;
+    flex-direction: column;
+}
+
+/* === Правый отступ между списками ======== */
+.adv-list > li:not(:last-child) {
+    margin-right: 30px;
+}
+
+/* === Блок - Фон иконок в Преимуществах ---- Вариант №1 - через  div   =======*/
+
+/* .adv-bg {
+    background-color: var(--secondary-bg-color);
+    width: 100%;
+    height: 120px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 4px;
+    margin-bottom: 30px;
+} */
+
+/* === Блок - Фон иконок в Преимуществах ---- Вариант №2 - через before  =======*/
+
+/* .adv-item::before {
+    content: " ";
+    display: block;
+    height: 120px;
+    background-color: var(--secondary-bg-color);
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 30px;
+}
+
+.antenna::before {background-image: url(../images/antenna.svg);}
+
+.clock::before {background-image: url(../images/clock.svg);}
+
+.diagram::before {background-image: url(../images/diagram.svg);}
+
+.astranaut::before {background-image: url(../images/astronaut.svg);} */
+
+
+/* === Блок - Фон иконок в Преимуществах ---- Вариант №3 - через SVG  =======*/
+.icon-advantage {
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    margin-bottom: 30px;
+    background-color: var(--secondary-bg-color);
+    
+}
+
+/* =====  Margin внизу всей секции  ==========*/
+.advantage {
+    padding-top: 94px;
+    padding-bottom: 94px; 
+}
+
+.advantage h2 {
+    display: none;
+    text-align: center;
+    margin-bottom: 30px;
+    color: coral;
+}
+
+/* ===== Margin иконок   =================*/
+.advantage img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+/* =====  Margin заголовков    ==============*/
+.advant-title {
+    margin-bottom: 10px;
+}
+
+/* =================== Заголовки в Преимуществах и Чем занимаемся   ========================*/
+.advant-title, .works-subtitle {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.1;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--secondary-text-color);
+}
+
+/* ======== Абзац в Преимуществах========== */
+.advantage p {
+    font-size: 14px;
+    line-height: 1.7;
+    letter-spacing: 0.03em;
+    height: 75px;
+}
+
+/* ========================== Секция Чем мы занимаемся    ==============================  */
+/* ===========  Flex-box списка  ========  */
+.works-list {
+    display: flex;
+}
+
+.works-list > li {
+    width: calc((100%-60px)/3);
+
+    overflow: hidden;
+}
+
+.works-list > li:not(:last-child) {
+    margin-right: 30px;
+}
+
+.works img {
+    display: block;
+}
+
+/* ==== Заголовок секции ================= */
+.works-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+/* ==== Виды услуг ======================= */
+.works-subtitle {
+    position: absolute;
+    width: 100%;
+    height: 70px;
+    left:0;
+    bottom: 0;
+    color: var(--main-bg-color);
+    background-color: rgba(47, 48, 58, 0.8);
+    text-align: center;
+
+    padding-top: 27px;
+    padding-bottom: 27px;
+    
+}
+
+/* ==== Позиционирование элементов Чем Занимаемся ==== */
+.works-item {
+    position: relative;
+}
+
+/* ====  Паддиг внизу секции  ================== */
+.works {
+    padding-bottom: 94px;
+}
+
+
+/* =================================== Секция Наша команда ===================================  */
+/* =====  Размеры всей секции  ============ */
+.team { 
+    background-color: var(--secondary-bg-color);
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+.team-members {
+    display: flex;
+}
+
+/* ======== Заголовок Наша команда ======== */
+.team-title {
+    margin-bottom: 50px;
+}
+
+/* ========== Фото команды   ============== */
+.team img {
+    display: block;
+    margin-bottom: 30px;
+}
+
+.team-card {
+    overflow: hidden;
+}
+
+/* ========== Имена сотрудников =========== */
+.team-name {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+    color: var(--secondary-text-color);
+    text-align: center;
+
+    margin-bottom: 10px;
+}
+
+/* ========== Должности =================== */
+.team-position {
+font-size: 16px;
+line-height: 1.2;
+letter-spacing: 0.03em;
+text-align: center;
+
+margin-bottom: 16px;
+}
+
+/* ========= Соцсети иконки  Вариант №1 картинки через background-image====================== */
+/* .team-social a {
+    display: block;
+    text-decoration: none;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+} */
+
+/* .icon-insta {background-image: url(../images/instagram.svg);}
+
+.icon-tweeter {background-image: url(../images/twitter.svg);}
+
+.icon-fb {background-image: url(../images/facebook.svg);}
+
+.icon-linedin {background-image: url(../images/linkedin.svg);} */
+
+/* ========= Соцсети иконки  Вариант №2 картинки через ::after ====================== */
+
+/* .team-social a::after {
+    content: "";
+    display: block;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.item-insta a::after { background-image: url(../images/instagram.svg);}
+
+.item-twiter a::after {background-image: url(../images/twitter.svg);}
+
+.item-fb a::after {background-image: url(../images/facebook.svg);}
+
+.item-linkedin a::after {background-image: url(../images/linkedin.svg);}  */
+
+
+/* ========= Соцсети иконки  Вариант №3 картинки через SVG ====================== */
+.team-social a {
+    display: block;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: var(----main-bg-color);
+
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
+.icon-svg {
+    fill: var(--team-social-icons);
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.team-social > li:hover .icon-svg {
+    fill: var(--main-bg-color);
+}
+
+.team-social a:hover,
+.team-social a:focus{
+    background-color: var(--color-acent);
+}
+
+/* ==== Карточка команды- Li */
+.team-card {
+    width: calc((100%-90px)/4);
+    background: var(--main-bg-color);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+}
+
+/* ======== Список Соц.-сети команды ========== */
+.team-social {
+    display: flex;
+    margin-left: 32px;
+    margin-right: 32px;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+/* === Отступы в соцсетях команды ======== */
+.team-social >li:not(:last-child) {
+    margin-right: 10px;
+}
+
+/* === Правый отступ для 3х первых карточек сотрудников ===*/
+.team-members .team-card:nth-child(-n+3) {
+    margin-right: 30px;
+}
+
+/* =============================== Секция Постоянные клиенты ==================================  */
+
+.clients {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+/* === Заголовок Клиенты ============ */
+.clients-title {
+    margin-bottom: 50px;
+}
+
+/* ======= Список компаний =========== */
+.clients-list {
+    display: flex;
+}
+
+/* ==== Ссылки на компании  ========== */
+.clients a {
+    display: flex;
+    text-decoration: none;
+    width: 170px;
+    height: 90px;
+    background: var(--main-bg-color);
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #AFB1B8;
+    border-radius: 4px;
+
+    transition-property: border;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.icon-clients {
+    fill: var(--team-social-icons);
+
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    
+}
+
+.clients-list > li:not(:last-child) {
+    margin-right: 30px;
+}
+
+.clients a:hover,
+.clients a:focus {
+    border: 1px solid #2196F3;
+}
+
+.clients a:hover svg,
+.clients a:focus svg {
+    fill: var(--color-acent);
+}
+
+

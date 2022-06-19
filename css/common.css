@@ -1,0 +1,386 @@
+/* color-accent:           #2196F3;  */
+/* Основной цвет текста:   #757575;  */
+/* Вторичный цвет текста:  #212121   */
+/* Основной цвет фона:     #FFFFFF   */
+/* Вторичный цвет фона:    #F5F4FA   */
+/* Цвет футера:            #2F303A   */
+
+:root {
+    --color-acent: #2196F3;
+    --main-text-color: #757575;
+    --secondary-text-color: #212121;
+    --main-bg-color: #FFFFFF;
+    --secondary-bg-color: #F5F4FA; 
+    --footer-bg-color: #2F303A;
+    --team-social-icons: #AFB1B8;
+    --footer-grey-text: rgba(255, 255, 255, 0.6);
+    --footer-social-bg: rgba(255, 255, 255, 0.1);  
+}
+
+/* html{ box-sizing: border-box;}  этот стиль есть в Normalize-min */
+
+body{
+    font-family: 'Roboto', sans-serif;
+    color: var(--main-text-color);
+    background-color: #ffffff;
+
+    overflow: scroll;
+  }
+
+.list {list-style: none;
+    margin: 0px;
+    padding: 0;
+}
+
+h1,h2,h3,h4,h5,h6, p {
+    margin: 0;
+}
+.container {
+    max-width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+   
+}
+
+/* ===========================================Стили Хедера ==================================== */
+/* ==== Flex-box Header   ============= */
+
+.header-flex {
+    display: flex;
+    align-items: baseline;
+    padding-top: 6px;
+}
+
+/* ====  Flex-box навигации хедера===== */
+.header-nav {
+display: flex;
+}
+
+/* ================ Логотип ============ */
+.logo-header { 
+    display: block;
+    font-family: Raleway, sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--secondary-text-color);
+    text-decoration: none;
+
+    margin-left: 0;
+    margin-right: 86px;
+}
+
+.logo-header span{
+    font-family: Raleway, sans-serif;
+    color: var(--color-acent);
+}
+
+/* ==============  Навигация =========== */
+.nav-list {
+    display: flex;
+    align-items: center;
+}
+
+.nav-list > li:not(:last-child) {
+margin-right: 50px;
+}
+
+.site-nav{
+    display: block;
+    font-size: 14px; 
+    font-weight: 500 ;
+    line-height: 1.1;
+    color: var(--secondary-text-color);
+    text-decoration: none;
+    padding-top: 22px;
+    padding-bottom: 28px;
+
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
+.site-nav:hover,
+.site-nav:focus {
+    color: var(--color-acent);
+}
+
+.site-nav.current {
+    color: var(--color-acent);
+}
+/* ===== Декоратвная планка в навигации шапки ==== */
+.nav-list > li {
+    display: flex;
+    flex-direction: column;
+}
+.nav-item::after {
+    content: '';
+    width: 100%;
+    height: 4px;
+    background-color: var(--color-acent);
+    border-radius: 2px;
+    opacity: 0;
+}
+
+.current-page::after{
+    opacity: 1;
+}
+
+/* ========== Контакты в навигации ======== */
+.nav-contacts {
+    display: flex;
+    margin-left: auto;
+}
+
+.nav-contacts > li:not(:first-of-type) {
+    margin-left: 30px;
+}
+
+.nav-contacts a{
+ text-decoration: none;
+ font-size: 14px;
+ line-height: 1.1;
+ font-weight: 500;
+ color: var(--main-text-color);
+
+transition-property: color;
+transition-duration: 250ms;
+transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-contacts a:hover,
+.nav-contacts a:focus {
+    color: var(--color-acent);
+}
+
+/* ===== Иконки перед контактами  Вариант через ::before/after====== */
+/* .nav-contacts > li::before{
+    content: "";
+    display: inline-flex;
+    width: 16px;
+    height: 16px;
+    background-position: center;
+    background-repeat: no-repeat;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.nav-contacts > li {display: flex;}
+
+.icon-envelop::before {background-image: url(../images/envelope-hover.svg);}
+
+.icon-mobile::before {background-image: url(../images/phone-hover.svg);}
+ */
+
+/* ===== Иконки перед контактами  Вариант через SVG  ====== */
+.nav-contacts a {
+    display: flex;
+    padding-top: 22px;
+    padding-bottom: 30px;
+}
+
+
+.icon {
+    margin-right: 10px;
+    fill: var(--main-text-color);
+    
+}
+
+.nav-contacts li:hover .icon{
+    fill: var(--color-acent);
+}
+
+
+
+/* ================================      Футер          ====================================== */
+footer {
+    background-color: var(--footer-bg-color);
+    
+}
+
+.footer-box {
+    display: flex;
+    align-items: baseline;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+/*  ========  Логотип Футера  ============ */
+.logo-header.logo-footer {
+   color: var(--main-bg-color);
+   margin-top: 0;
+   margin-bottom: 20px;
+}
+
+/* ======= Адрес, Тел, E-mail в футере ========== */
+.foot-adress{
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--footer-grey-text);
+
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-contacts li {
+    margin-bottom: 9px;
+}
+
+.foot-adress:hover,
+.foot-adress:focus {
+    color: var(--main-bg-color);
+}
+
+/* ======= Отступ от адреса ============== */
+.footer-contacts {
+    margin-right: 70px;
+}
+
+/* ========= Заголовки в футере   ========*/
+.title-footer {
+    display: inline-flex;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.1;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--main-bg-color);
+    margin-bottom: 20px;
+}
+
+/* ======= Ссылки на соцсети в футере  Variant #1  =============================================== */
+/* .foter-social a{
+    display: block;
+    text-decoration: none;
+    width: 44px;
+    height: 44px;
+
+    color: #FFFFFF;
+    background-color: rgba(255, 255, 255, 0.1);
+    
+    border-radius: 50%;
+    padding-top: 12px;   
+}
+
+.foot-list {
+    display: flex;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.foot-list li:not(:last-child) {
+    margin-right: 10px;
+} */
+
+/* ====== Ссылки на соцсети в футере  Variant #2 не работает с :hover ================================*/
+/* .icon-foot >a::after {
+content: "";
+display: block;
+width: 44px;
+height: 44px;
+
+background-repeat:no-repeat;
+background-position: 50% 50%;
+background-color: rgba(255, 255, 255, 0.1);
+border-radius: 50%;}
+
+
+
+.insta a::after {background-image: url(../images/instagram-2.svg);}
+.twiter a::after {background-image: url(../images/twitter-2.svg);}
+.fb a::after{background-image: url(../images/facebook-2.svg);}
+.linkedin a::after{background-image: url(../images/linkedin-1.svg);} */
+
+/* ===== Ссылки на соцсети в футере Variant #3 через SVG  ========================================*/
+.foot-list {
+    display: flex;
+}
+
+.icon-foot-svg {
+    fill: var(--main-bg-color);
+    width: 20px;
+    height: 20px;
+}
+
+.icon-foot a {
+    display: flex;
+    width: 44px;
+    height: 44px;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--footer-social-bg);
+    border-radius: 50%;
+
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.icon-foot:not(:last-of-type) {
+    margin-right: 10px;
+}
+
+.icon-foot a:hover,
+.icon-foot a:focus {
+    background-color: var(--color-acent);
+}
+
+
+/* ======= Поле ввода E-mail в футере   ============= */
+.footer-action {
+    margin-left: auto;
+}
+
+.footer-action input{
+    font-size: 16px;
+    color: var(--footer-grey-text);
+    background-color: var(--footer-bg-color);
+    width: 358px;
+    height: 50px;
+    padding-left: 16px;
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    margin-right: 12px;
+}
+
+/* ======= Кнопка ПОДПИСАТЬСЯ в футере   ============= */
+/* === Стили кнопки -:after работает только при display: flex; ======================     !!!     */
+.footer-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.9;
+    letter-spacing: 0.06em;
+    color: var(--main-bg-color);
+    background-color: var(--color-acent);
+    width: 200px;
+    height: 50px;
+    cursor: pointer;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border: none;
+}
+
+.input-deco {
+    display: flex;
+}
+
+.footer-btn::after {
+    content: " ";
+    width: 24px;
+    height: 24px;
+    background-image: url(../images/SVG-for-sprite/icon-send.svg);
+    /* background-size: contain; */
+    margin-left: 10px;
+}
+/* Тест из конспекта */
