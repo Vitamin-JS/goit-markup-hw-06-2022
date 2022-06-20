@@ -47,6 +47,10 @@ h1,h2,h3,h4,h5,h6, p {
 /* ===========================================Стили Хедера ==================================== */
 /* ==== Flex-box Header   ============= */
 
+header {
+    min-width: 1200px;
+}
+
 .header-flex {
     display: flex;
     align-items: baseline;
@@ -198,7 +202,7 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 /* ================================      Футер          ====================================== */
 footer {
     background-color: var(--footer-bg-color);
-    min-width: 1600px;
+    min-width: 1200px;
 }
 
 .footer-box {
