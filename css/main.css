@@ -115,8 +115,7 @@
     margin-bottom: 20px;
 }
 
-.modal-data input,
-.modal-data textarea {
+.modal-input {
     width: 448px;
     height: 40px;
     padding: 12px 42px;
@@ -182,6 +181,11 @@
     color: var(--color-acent);
 }
 
+.modal-input:focus {
+    border: none;
+    outline: solid 1px #2196F3;
+}
+
 /* ===  Focus на input  ==== */
 .modal-input:focus + .modal-label,
 .modal-input:not(:placeholder-shown) + .modal-label {
@@ -195,7 +199,6 @@
     color: var(--color-acent);
     transform: translate(-16px, -32px);
 }
-
 
 /* === Кнопка в модалке ========== */
 .modal-close {
