@@ -100,7 +100,6 @@
 }
 
 /* === Форма модалки ======= */
-
 .modal-title {
     font-weight: 700;
     font-size: 20px;
@@ -109,12 +108,14 @@
     color: var(--secondary-text-color);
     margin-bottom: 30px;
 }
-
+/* === Блок инпутов ======== */
 .modal-data {
-    display: flex;
-    flex-direction: column;
+    position: relative;
+    margin-bottom: 28px;
+}
+
+.modal-data.comment {
     margin-bottom: 20px;
-    
 }
 
 .modal-data input,
@@ -122,7 +123,6 @@
     width: 448px;
     height: 40px;
     padding: 12px 42px;
-    margin-bottom: 28px;
 
     font-size: 14px;
     letter-spacing: 0.01em;
@@ -134,9 +134,26 @@
 
 .modal-data textarea {
     height: 120px;
-    resize: none;
+    padding: 12px 16px;
     margin-bottom: 0;
+    resize: none;
 }
+
+/* === Позиционирование Label=== */
+.modal-label {
+    position: absolute;
+    top: 50%;
+    left: 42px;
+    transform: translateY(-50%);
+}
+
+.modal-textaria-label {
+    position: absolute;
+    top: 12px;
+    left: 16px;
+
+}
+
 
 .data-policy {
     margin-bottom: 30px;
@@ -144,6 +161,7 @@
     line-height: 1.7;
     letter-spacing: 0.03em;
 }
+
 .modal-btn {
     width: 200px;
     height: 50px;

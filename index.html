@@ -67,14 +67,24 @@
                 <form action="">
                     <h2 class="modal-title">Залиште свої дані, ми вам передзвонимо</h2>
                     <div class="modal-data">
-                    <input type="text" name="user-name" placeholder="Ім'я" autocomplete="name" autofocus>
-                    <input type="tel" name="user-phone" placeholder="Телефон" autocomplete="tel" >
-                    <input type="email" name="user-email" placeholder="Пошта" autocomplete="email">
-                    <textarea name="user-comment" id="" rows="6" placeholder="Коментар"></textarea>
-                    </div> 
+                        <input type="text" name="user-name" id="user-name" autocomplete="name" autofocus>
+                        <label for="user-name" class="modal-label">Ім'я</label>
+                    </div>
+                    <div class="modal-data">
+                        <input type="tel" name="user-phone" id="user-phone" autocomplete="tel">
+                        <label for="user-phone" class="modal-label" >Телефон</label>
+                    </div>
+                    <div class="modal-data">
+                        <input type="email" name="user-email" id="user-email"  autocomplete="email">
+                        <label for="comment" class="modal-label">Пошта</label>
+                    </div>
+                    <div class="modal-data comment">
+                        <textarea name="user-comment" id="comment" rows="6"></textarea>
+                        <label for="comment" class="modal-textaria-label">Коментар</label>
+                    </div>
                     <div class="data-policy">
-                    <input type="checkbox" name="policy" id="policy">
-                    <label for="policy">Погоджуюсь з розсилкою та приймаю<a href="" class="modal-policy-link"> Умови договора</a></label>
+                        <input type="checkbox" name="policy" id="policy">
+                        <label for="policy">Погоджуюсь з розсилкою та приймаю<a href="" class="modal-policy-link"> Умови договора</a></label>
                     </div>
                     <button type="submit" class="modal-btn">Відправити</button>
                     
