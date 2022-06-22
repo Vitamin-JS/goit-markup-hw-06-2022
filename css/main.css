@@ -180,7 +180,7 @@
 .modal-policy-link {
     color: var(--color-acent);
 }
-
+/* === Аутлайн инпутов при фокусе ===== */
 .modal-input:focus {
     border: none;
     outline: solid 1px #2196F3;
@@ -200,29 +200,43 @@
     transform: translate(-16px, -32px);
 }
 
-/* === Кнопка в модалке ========== */
+/* === Икоки в инпутах ===== */
+.icon-modal {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 18px;
+    transform: translateY(-50%);
+}
+
+.modal-input:focus ~ .icon-modal {
+    fill: var(--color-acent);
+}
+
+/* === Кнопка в модалке SVG ========== */
 .modal-close {
     position: absolute;
     display: flex;
     top: 0px;
     right: 0px;
+    justify-content: center;
+    align-items: center;
+
     transform: translate(50%, -50%);
     width: 30px;
     height: 30px;
     border-radius: 50%;
     background-color: var(--main-bg-color);
     border: 1px solid rgba(0, 0, 0, 0.1);
-    align-items: center;
     cursor: pointer;
+    
 }
 
-.modal-close::after {
-    content: '';
-    width: 18px;
-    height: 18px;
-    background-image: url(../images/close-black.svg);
-    background-position: center;
+.modal-close:hover .icon-modal-close,
+.modal-close:focus .icon-modal-close {
+    fill:#2196F3
 }
+
 
 /* =================== Секция Преимущесва ==============================  */
 /* ==== Flex-box Преимущества   =============*/

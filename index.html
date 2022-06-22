@@ -35,7 +35,6 @@
             <!-- Блок с контактами -->
             <ul class="nav-contacts list">
                 <li class="icon-envelop">
-                    
                     <a href="mailto:info@webprofi.com" target="_blank" rel="noopener" >
                         <svg class="icon" width="16" height="16">
                             <use href="./images/SVG-for-sprite/sprite-all-min.svg#icon-envelope"></use>
@@ -64,33 +63,54 @@
             <!-- Модальное окно -->
             <div class="backdrop is-hidden" data-modal>
                 <div class="modal">
-                <form action="">
-                    <h2 class="modal-title">Залиште свої дані, ми вам передзвонимо</h2>
-                    <div class="modal-data">
-                        <input type="text" name="user-name" id="user-name" class="modal-input" autocomplete="name" placeholder=" " autofocus>
-                        <label for="user-name" class="modal-label">Ім'я</label>
-                    </div>
-                    <div class="modal-data">
-                        <input type="tel" name="user-phone" id="user-phone" class="modal-input"  autocomplete="tel" placeholder=" ">
-                        <label for="user-phone" class="modal-label" >Телефон</label>
-                    </div>
-                    <div class="modal-data">
-                        <input type="email" name="user-email" id="user-email" class="modal-input"  autocomplete="email" placeholder=" ">
-                        <label for="comment" class="modal-label">Пошта</label>
-                    </div>
-                    <div class="modal-data comment">
-                        <textarea name="user-comment" id="comment" class="modal-input" rows="6" placeholder=" "></textarea>
-                        <label for="comment" class="modal-textaria-label">Коментар</label>
-                    </div>
-                    <div class="data-policy">
-                        <input type="checkbox" name="policy" id="policy">
-                        <label for="policy">Погоджуюсь з розсилкою та приймаю<a href="" class="modal-policy-link"> Умови договора</a></label>
-                    </div>
-                    <button type="submit" class="modal-btn">Відправити</button>
+                    <!-- ---  Иконка в btn SVG--------------------- -->
+                    <button class="modal-close" data-modal-close>
+                        <svg class="icon-modal-close" width="15" height="15">
+                            <use href="./images/SVG-for-sprite/sprite-modal-min.svg#close-black"></use>
+                        </svg>
+                    </button>
+
+                    <form action="">
+                        <h2 class="modal-title">Залиште свої дані, ми вам передзвонимо</h2>
+                        <div class="modal-data">
+                            <input type="text" name="user-name" id="user-name" class="modal-input" autocomplete="name" placeholder=" " autofocus>
+                            <label for="user-name" class="modal-label">Ім'я</label>
+                            <span class="icon-modal" >
+                                <svg class="modal-svg" width="12" height="12" >
+                                    <use href="./images/SVG-for-sprite/sprite-modal-min.svg#modal-name"></use>
+                                </svg>
+                            </span>
+                        </div>
+                        <div class="modal-data">
+                            <input type="tel" name="user-phone" id="user-phone" class="modal-input"  autocomplete="tel" placeholder=" ">
+                            <label for="user-phone" class="modal-label">Телефон</label>
+                            <span class="icon-modal">
+                                <svg class="modal-svg" width="13" height="13">
+                                    <use href="./images/SVG-for-sprite/sprite-modal-min.svg#modal-phone"></use>
+                                </svg>
+                            </span>
+                        </div>
+                        <div class="modal-data">
+                            <input type="email" name="user-email" id="user-email" class="modal-input"  autocomplete="email" placeholder=" ">
+                            <label for="comment" class="modal-label">Пошта</label>
+                            <span class="icon-modal">
+                                <svg class="modal-svg" width="15" height="12">
+                                    <use href="./images/SVG-for-sprite/sprite-modal-min.svg#modal-email"></use>
+                                </svg>
+                            </span>
+                        </div>
+                        <div class="modal-data comment">
+                            <textarea name="user-comment" id="comment" class="modal-input" rows="6" placeholder=" "></textarea>
+                            <label for="comment" class="modal-textaria-label">Коментар</label>
+                        </div>
+                        <div class="data-policy">
+                            <input type="checkbox" name="policy" id="policy">
+                            <label for="policy">Погоджуюсь з розсилкою та приймаю<a href="" class="modal-policy-link"> Умови договора</a></label>
+                        </div>
+                        <button type="submit" class="modal-btn">Відправити</button>
+                        
+                    </form>
                     
-                </form>
-                <!-- ---  Иконка в btn не ставится через SVG--------------------- -->
-                <button class="modal-close" data-modal-close></button>
                 </div>
             </div>
 
@@ -115,8 +135,6 @@
             }
             </script> -->
         </section>
-
-        
 
         <!-- Секция преимущества -->
         <section class="advantage container">
