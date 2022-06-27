@@ -109,6 +109,7 @@
 .modal-data {
     position: relative;
     margin-bottom: 28px;
+    list-style: none;
 }
 
 .modal-data.comment {
