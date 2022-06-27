@@ -72,7 +72,7 @@
                     <!-- --- Можно input поместить в label и избавиться от id--------- -->
                     <form action="">
                         <h2 class="modal-title">Залиште свої дані, ми вам передзвонимо</h2>
-                        <ul>
+                        <ul class="modal-data-list">
                             <li class="modal-data">
                                 <input type="text" name="user-name" id="user-name" class="modal-input" autocomplete="name"
                                     placeholder=" " autofocus>
@@ -115,8 +115,11 @@
                         <div class="modal-data comment"></div>    Заменил div на семантичные li-->
                                                     
                         <div class="data-policy">
-                            <input type="checkbox" name="policy" id="policy">
-                            <label for="policy">Погоджуюсь з розсилкою та приймаю<a href="" class="modal-policy-link"> Умови договора</a></label>
+                            <label class="data-policy-label">Погоджуюсь з розсилкою та приймаю
+                            <input class="checkbox" type="checkbox" name="policy">
+                            <a href="" class="modal-policy-link"> Умови договора</a>
+                            <span class="data-policy-checkbox"></span>
+                            </label>
                         </div>
                         <button type="submit" class="modal-btn">Відправити</button>
                         

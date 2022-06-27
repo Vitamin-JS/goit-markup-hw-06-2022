@@ -105,7 +105,14 @@
     color: var(--secondary-text-color);
     margin-bottom: 30px;
 }
-/* === Блок инпутов ======== */
+/* === Блок инпутов Ul======== */
+
+.modal-data-list {
+margin: 0;
+padding: 0;
+}
+
+/* === Список инпутов Li=== */
 .modal-data {
     position: relative;
     margin-bottom: 28px;
@@ -153,14 +160,43 @@
 
     transition: transform 200ms linear;
 }
-
+/* === Чекбокс политики  ========= */
 .data-policy {
+    display: flex;
+    justify-content: center;
     margin-bottom: 30px;
     font-size: 14px;
     line-height: 1.7;
     letter-spacing: 0.03em;
 }
+/* ==== кастомный чекбокс - span==== */
+.data-policy-label {
 
+    position: relative;
+    padding-left: 24px;
+    display: flex;
+    align-items: center;
+}
+
+.data-policy-checkbox {
+    display: inline-block;
+    position: absolute;
+    
+    left:0;
+    width: 16px;
+    height: 15px;
+    border-radius: 2px;
+    border: solid 2px var(--secondary-text-color);
+    margin-right: 8px;
+}
+
+
+/* === Скрываю чекбокс ====== */
+.checkbox {
+appearance: none;
+}
+
+/* === Кнопка в модалке  ======== */
 .modal-btn {
     width: 200px;
     height: 50px;
