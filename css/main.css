@@ -169,7 +169,8 @@ padding: 0;
     line-height: 1.7;
     letter-spacing: 0.03em;
 }
-/* ==== кастомный чекбокс - span==== */
+
+/* ==== кастомный чекбокс - span ==== */
 .data-policy-label {
 
     position: relative;
@@ -191,12 +192,16 @@ padding: 0;
 }
 
 
-/* === Скрываю чекбокс ====== */
+/* === Скрываю чекбокс в Политике ====== */
 .checkbox {
 appearance: none;
 }
 
-/* === Кнопка в модалке  ======== */
+.checkbox:checked ~ .data-policy-checkbox {
+    background-color: purple;
+}
+
+/* === Кнопка Відправити в модалке  ======== */
 .modal-btn {
     width: 200px;
     height: 50px;
@@ -250,7 +255,7 @@ appearance: none;
     fill: var(--color-acent);
 }
 
-/* === Кнопка в модалке SVG ========== */
+/* === Кнопка Close в модалке SVG ========== */
 .modal-close {
     position: absolute;
     display: flex;
