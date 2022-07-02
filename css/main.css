@@ -108,20 +108,27 @@
 /* === Блок инпутов Ul======== */
 
 .modal-data-list {
-margin: 0;
+margin-top: 0;
+margin-bottom: 20px;
+margin-left: 0;
+margin-right: 0;
 padding: 0;
+
 }
 
 /* === Список инпутов Li=== */
 .modal-data {
     position: relative;
-    margin-bottom: 28px;
     list-style: none;
 }
 
-.modal-data.comment {
-    margin-bottom: 20px;
+.modal-data:not(:last-child) {
+    margin-bottom: 28px;
 }
+
+/* .modal-data.comment {
+    margin-bottom: 20px;
+} */
 
 .modal-input {
     width: 448px;
@@ -172,17 +179,18 @@ padding: 0;
 
 /* ==== кастомный чекбокс - span ==== */
 .data-policy-label {
-
     position: relative;
-    padding-left: 24px;
     display: flex;
     align-items: center;
+    padding-left: 24px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    cursor: pointer;
 }
 
 .data-policy-checkbox {
     display: inline-block;
     position: absolute;
-    
     left:0;
     width: 16px;
     height: 15px;
@@ -198,7 +206,10 @@ appearance: none;
 }
 
 .checkbox:checked ~ .data-policy-checkbox {
-    background-color: purple;
+    background-image: url(../images/SVG-for-sprite/icon-policy-check-min.svg);
+    background-size: contain;
+    background-origin: border-box;
+    border: none;
 }
 
 /* === Кнопка Відправити в модалке  ======== */
@@ -211,6 +222,7 @@ appearance: none;
     font-weight: 700;
     font-size: 16px;
     line-height: 1.88;
+    
     background-color: var(--color-acent);
     color: var(--main-bg-color);
     border-style: none;
