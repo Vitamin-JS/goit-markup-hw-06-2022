@@ -199,6 +199,13 @@ padding: 0;
     margin-right: 8px;
 }
 
+.checkbox:focus ~ .data-policy-checkbox{
+    width: 20px;
+    height: 19px;
+    border: solid 2px var(--color-acent);
+}
+
+
 
 /* === Скрываю чекбокс в Политике ====== */
 .checkbox {
